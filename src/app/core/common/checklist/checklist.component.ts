@@ -1,15 +1,40 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
+interface Check{
+	status: boolean;
+	dueDate: Date;
+	text: string;
+	user?: number;
+
+}
+
+
+
 @Component({
-  selector: 'app-checklist',
-  templateUrl: './checklist.component.html',
-  styleUrls: ['./checklist.component.scss']
+	selector: 'app-checklist',
+	templateUrl: './checklist.component.html',
+	styleUrls: ['./checklist.component.scss']
 })
+
+
+
 export class ChecklistComponent implements OnInit {
 
-  constructor() { }
+	private checkList: Check[];
 
-  ngOnInit() {
-  }
+	constructor() { }
+
+	ngOnInit() {
+		this.checkList = [
+			{ status: false, dueDate: new Date(), text: 'Tarea 1: ' },
+			{ status: false, dueDate: new Date(), text: 'Tarea 1: ' },
+			{ status: false, dueDate: new Date(), text: 'Tarea 1: ' },
+			{ status: false, dueDate: new Date(), text: 'Tarea 1: ' },
+			{ status: false, dueDate: new Date(), text: 'Tarea 1: ' },
+			{ status: false, dueDate: new Date(), text: 'Tarea 1: ' }
+		]
+	}
 
 }
