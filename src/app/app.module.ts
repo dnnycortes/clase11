@@ -3,11 +3,13 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { ChecklistComponent } from './core/common/checklist/checklist.component';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ChecklistComponent
   ],
   imports: [
     BrowserModule
