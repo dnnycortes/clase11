@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
 
+interface Task{
+	name: string;
+	status: any;
+	checkList?: any;
+}
 
 @Component({
 	selector: 'app-check',
@@ -11,6 +16,15 @@ import { Component, OnInit } from '@angular/core';
 
 
 export class CheckComponent implements OnInit {
+
+	// task
+	/*{
+		name: "",
+		status: [0 | 1 | 2 | 3 | 4 | 5],
+		checkList?: {
+			{ status: false, dueDate: new Date(), text: 'Tarea 1: ' }
+		}
+	}*/
 
 	public foo: any;
 

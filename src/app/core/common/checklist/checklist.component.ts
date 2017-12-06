@@ -3,7 +3,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 
 
 
-interface Check{
+export interface Check{
 	status: boolean;
 	dueDate: Date;
 	text: string;
@@ -22,7 +22,7 @@ interface Check{
 
 
 export class ChecklistComponent implements OnInit, AfterViewInit {
-
+	//@Input()
 	private checkList: Check[];
 
 	constructor() { }
@@ -38,12 +38,20 @@ export class ChecklistComponent implements OnInit, AfterViewInit {
 		]
 	}
 
-	ngAfterViewInit(){
+	/*ngAfterViewInit(){
 		this.checkList.forEach((item: CheckComponent) => item.foo = "Hola" );
 	}
 
 	foo(){
 		this.checkList.push({status: false, dueDate: new Date(), text: 'Tarea 2: '})
+	}*/
+
+	addTask( form ){
+		console.log(form);
+		this.checkList.push({status: false, dueDate: new Date(), text: form.value });
+		form.value = "";
 	}
 
 }
+
+/* login, board, añadir el router module y la interfaz del route */

@@ -1,5 +1,11 @@
 <!-- estilos aquí, si se habilita con un checkbox, el estilo cammbia ngclass -->
 
+
+<div>
+	<input (keyup.enter)="addTask(checkText)" type="text" #checkText required>
+	<button (click)="addTask(checkText)">Add Task</button>
+</div>
+
 <div>
 	<ul>
 		<app-check *ngFor="let check of checkList">
@@ -12,3 +18,9 @@
 	<button (click)="foo()">Click</button>
 </div>
 
+
+<!-- necesita un texto
+el componente de checkList
+estados: to-do, in-progess, done
+generar la interface como el checkitem
+-->
